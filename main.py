@@ -19,13 +19,13 @@ def decrypt():
 
 def encrypt():	
 	
-	keys = [] 					#сюда будут помещены ключи
-	img = Image.open(input("path to image: ")) 	#создаём объект изображения
-	draw = ImageDraw.Draw(img)	   		#объект рисования
-	width = img.size[0]  		   		#ширина
-	height = img.size[1]		   		#высота	
-	pix = img.load()				#все пиксели тут
-	f = open('keys.txt','w')			#текстовый файл для ключей
+	keys = [] 					
+	img = Image.open(input("path to image: ")) 	
+	draw = ImageDraw.Draw(img)	   		
+	width = img.size[0]  		   		
+	height = img.size[1]		   		
+	pix = img.load()				
+	f = open('keys.txt','w')			
 
 	for elem in ([ord(elem) for elem in input("text here: ")]):
 		key = (randint(1,width-10),randint(1,height-10))		
